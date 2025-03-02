@@ -108,15 +108,27 @@
         <legend class="catalog-filter-title">Стоимость, ₽:</legend>
         <ul class="catalog-filter-period">
           <li class="catalog-filter-period-item">
-            <input class="period-input" type="text" name="min-price" placeholder="от" value="0">
+            <label>
+              <span class="visually-hidden">Минимальная цена</span>
+              <input class="period-input" type="text" name="min-price" placeholder="от" value="0">
+            </label>
           </li>
           <li class="catalog-filter-period-item">
-            <input class="period-input" type="text" name="max-price" placeholder="до" value="9000">
+            <label>
+              <span class="visually-hidden">Максимальная цена</span>
+              <input class="period-input" type="text" name="max-price" placeholder="до" value="9000">
+            </label>
           </li>
         </ul>
         <div class="catalog-filter-period-range">
-          <input class="period-range-item" type="range" min="0" max="9000" name="price-range">
-          <input class="period-range-item" type="range" min="0" max="9000" name="price-range">
+          <label>
+            <span class="visually-hidden">Минимальная цена на промежутке</span>
+            <input class="period-range-item" type="range" min="0" max="9000" name="price-range">
+          </label>
+          <label>
+            <span class="visually-hidden">Максимальная цена на промежутке</span>
+            <input class="period-range-item" type="range" min="0" max="9000" name="price-range">
+          </label>
         </div>
       </fieldset>
       <button class="button" type="submit">Применить</button>
@@ -248,7 +260,10 @@
     <h2 class="notification-title">Подпишитесь на рассылку</h2>
     <p class="notification-subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
     <form class="notification-form" action="https://echo.htmlacademy.ru/" method="post">
-      <input type="email" id="notification-form-id" name="email" placeholder="Ваш e-mail">
+      <label>
+        <span class="visually-hidden">Электронная почта</span>
+        <input type="email" id="notification-form-id" name="email" placeholder="Ваш e-mail">
+      </label>
       <button class="button" type="submit">Подписаться</button>
     </form>
   </section>
