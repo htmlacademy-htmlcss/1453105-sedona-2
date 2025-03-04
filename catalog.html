@@ -13,33 +13,28 @@
     </a>
     <ul class="navigation-list">
       <li class="navigation-item">
-        <a class="navigation-link" href="index.html">Главная</a>
+        <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
       </li>
       <li class="navigation-item">
         <a class="navigation-link" href="#">О Седоне</a>
       </li>
       <li class="navigation-item">
-        <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
+        <a class="navigation-link" href="catalog.html">Гостиницы</a>
       </li>
     </ul>
     <ul class="navigation-list navigation-user">
       <li class="navigation-item">
-        <form class="navigation-form" action="#" method="post">
-          <label>
-            <input class="navigation-form-input" type="search">
-            <span class="visually-hidden">Поиск</span>
-          </label>
-        </form>
-      </li>
-      <li class="navigation-item">
         <a class="navigation-link" href="#">
-          <span>Избранное</span>
+          <span class="visually-hidden">Поиск</span>
         </a>
       </li>
       <li class="navigation-item">
         <a class="navigation-link" href="#">
-          <span class="visually-hidden">Хочу сюда</span>
+          <span class="visually-hidden">Избранное</span>
         </a>
+      </li>
+      <li class="navigation-item">
+        <a class="navigation-link button" href="#">Хочу сюда</a>
       </li>
     </ul>
   </nav>
@@ -108,37 +103,36 @@
         <legend class="catalog-filter-title">Стоимость, ₽:</legend>
         <ul class="catalog-filter-period">
           <li class="catalog-filter-period-item">
-            <label>
-              <span class="visually-hidden">Минимальная цена</span>
-              <input class="period-input" type="text" name="min-price" placeholder="от" value="0">
+            <label class="period-item">
+              <span class="period-item-label">от</span>
+              <input class="period-item-input" type="text" name="min-price" placeholder="от" value="0">
             </label>
           </li>
           <li class="catalog-filter-period-item">
-            <label>
-              <span class="visually-hidden">Максимальная цена</span>
-              <input class="period-input" type="text" name="max-price" placeholder="до" value="9000">
+            <label class="period-item">
+              <span class="period-item-label">до</span>
+              <input class="period-item-input" type="text" name="max-price" placeholder="до" value="9000">
             </label>
           </li>
         </ul>
         <div class="catalog-filter-period-range">
-          <label>
+          <label class="period-range-item">
             <span class="visually-hidden">Минимальная цена на промежутке</span>
-            <input class="period-range-item" type="range" min="0" max="9000" name="price-range">
+            <input class="period-range-item-input" type="range" min="0" max="9000" name="price-range">
           </label>
-          <label>
+          <label class="period-range-item">
             <span class="visually-hidden">Максимальная цена на промежутке</span>
-            <input class="period-range-item" type="range" min="0" max="9000" name="price-range">
+            <input class="period-range-item-input" type="range" min="0" max="9000" name="price-range">
           </label>
         </div>
       </fieldset>
       <button class="button" type="submit">Применить</button>
-      <button class="button">Сбросить</button>
+      <button class="button" type="reset">Сбросить</button>
     </form>
   </header>
   <section class="catalog-offers">
-    <h2 class="visually-hidden">Список предложений гостиниц</h2>
     <div class="offers-menu">
-      <p class="offers-count">Найдено гостиниц: 38</p>
+      <h2 class="offers-count">Найдено гостиниц: <span>38</span></h2>
       <select class="select-control" aria-label="Сортировка">
         <option value="popular">Сначала популярные</option>
         <option value="cheap">Сначала дешёвые</option>
@@ -247,15 +241,21 @@
     <ul class="pagination">
       <li class="pagination-item">
         <a class="pagination-link pagination-current">1</a>
+      </li>
+      <li class="pagination-item">
         <a class="pagination-link" href="#">2</a>
+      </li>
+      <li class="pagination-item">
         <a class="pagination-link" href="#">3</a>
+      </li>
+      <li class="pagination-item">
         <a class="pagination-link" href="#">4</a>
+      </li>
+      <li class="pagination-item">
         <a class="pagination-link" href="#">10</a>
       </li>
     </ul>
   </section>
-</main>
-<footer class="main-footer">
   <section class="notification catalog-page">
     <h2 class="notification-title">Подпишитесь на рассылку</h2>
     <p class="notification-subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
@@ -267,6 +267,8 @@
       <button class="button" type="submit">Подписаться</button>
     </form>
   </section>
+</main>
+<footer class="main-footer">
   <section class="contact">
     <h2 class="visually-hidden">Контакты</h2>
     <ul class="contact-social-list">
