@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Дарья Петрова](https://up.htmlacademy.ru/htmlcss-individual/2/user/1453105).
-* Наставник: `Неизвестно`.
+* Наставник: [Дина Шарипова](https://htmlacademy.ru/profile/id1418957).
+* Проект: [Проект Седона](https://daria-petrova.github.io/1453105-sedona-2/).
 
 ---
 
