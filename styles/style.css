@@ -442,14 +442,15 @@ body {
 }
 
 .catalog-filter {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 35px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .catalog-filter-group {
   padding: 0;
   margin: 0;
+  width: 200px;
+  margin-right: 20px;
 }
 
 .catalog-filter-list {
@@ -576,13 +577,15 @@ body {
   padding: 0;
   margin: 0;
   margin-bottom: 40px;
-  display: grid;
-  grid-template-columns: repeat(3, 340px);
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .offer-card {
   border: 1px solid #E5E5E5;
+  width: 333px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .offer-card-link {
