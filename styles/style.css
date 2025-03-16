@@ -427,30 +427,61 @@ body {
 }
 
 .catalog-header {
+  padding: 35px 70px;
+  min-height: 412px;
   background: #82b3d3 url("../images/decorate/background/filter-block.jpg") no-repeat;
   background-size: 100% auto;
 }
 
 .catalog-header-title {
+  margin: 0;
   font-size: 60px;
   line-height: 1.3;
   font-weight: 700;
   color: var(--default-color);
 }
 
+.catalog-filter {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 35px;
+}
+
+.catalog-filter-group {
+  padding: 0;
+  margin: 0;
+}
+
 .catalog-filter-list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .catalog-filter-title {
+  margin-bottom: 32px;
   font-size: 20px;
   line-height: 1.2;
   font-weight: 700;
   color: var(--default-color);
 }
 
+.catalog-filter-item {
+  margin-bottom: 16px;
+}
+
+.catalog-filter-item:last-child {
+  margin-bottom: 0;
+}
+
 .catalog-filter-group {
   border: none;
+}
+
+.catalog-filter-period {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .period-item-input {
@@ -475,6 +506,18 @@ body {
 
 .breadcrumbs {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
+  display: flex;
+}
+
+.breadcrumbs-item {
+  margin-left: 10px;
+}
+
+.breadcrumbs-item:first-child {
+  margin-left: 0;
 }
 
 .breadcrumbs-link {
@@ -483,13 +526,23 @@ body {
   color: var(--default-color);
 }
 
+
 /* --------------- Offers --------------- */
 .catalog-offers {
+  margin: 0 70px;
   color: var(--main-color);
   background-color: var(--default-color);
 }
 
+.offers-menu {
+  margin: 50px 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .offers-count {
+  margin: 0;
   font-family: inherit;
   font-size: 30px;
   line-height: 1.2;
@@ -513,8 +566,23 @@ body {
   color: var(--second-color);
 }
 
+.offers-view {
+  display: flex;
+  flex-direction: column;
+}
+
 .offer-list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  gap: 20px;
+}
+
+.offer-card {
+  border: 1px solid #E5E5E5;
 }
 
 .offer-card-link {
@@ -554,9 +622,25 @@ body {
 
 .pagination {
   list-style: none;
+  margin: 0;
+  padding: 40px 0 60px;
+  display: flex;
+  border-top: 1px solid #E5E5E5;
+}
+
+.pagination-item {
+  height: 60px;
+  margin-right: 8px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
 }
 
 .pagination-link {
+  border-radius: 4px;
+  align-content: center;
+  display: block;
+  width: 60px;
   font-size: 20px;
   line-height: 1.8;
   font-weight: 700;
