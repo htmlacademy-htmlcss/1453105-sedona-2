@@ -199,11 +199,11 @@ body {
 }
 
 .link-search:before {
-  content: url("/images/icons/search.svg");
+  content: url("../images/icons/search.svg");
 }
 
 .link-favorite:before {
-  content: url("/images/icons/heart.svg");
+  content: url("../images/icons/heart.svg");
 }
 
 /* --------------- Representation --------------- */
@@ -658,7 +658,7 @@ body {
 }
 
 .link-home {
-  background: url("/images/icons/home.svg") no-repeat;
+  background: url("../images/icons/home.svg") no-repeat;
   width: 15px;
   height: 13px;
   display: block;
@@ -674,7 +674,7 @@ body {
 }
 
 .breadcrumbs-link:before {
-  content: url("/images/icons/arrow.svg");
+  content: url("../images/icons/arrow.svg");
   margin-right: 10px;
 }
 
@@ -763,7 +763,7 @@ body {
 }
 
 .show-medium-cards:before {
-  content: url("/images/icons/view/view-flat.svg");
+  content: url("../images/icons/view/view-flat.svg");
   display: flex;
   width: 16px;
   height: 14px;
@@ -772,7 +772,7 @@ body {
 }
 
 .show-large-cards:before {
-  content: url("/images/icons/view/view-main.svg");
+  content: url("../images/icons/view/view-main.svg");
   display: flex;
   width: 16px;
   height: 14px;
@@ -781,7 +781,7 @@ body {
 }
 
 .show-list-cards:before {
-  content: url("/images/icons/view/view-table.svg");
+  content: url("../images/icons/view/view-table.svg");
   display: flex;
   width: 16px;
   height: 14px;
@@ -880,7 +880,7 @@ body {
 }
 
 .star {
-  background-image: url("/images/icons/star.svg");
+  background-image: url("../images/icons/star.svg");
   width: 18px;
   height: 18px;
   margin-right: 6px;
@@ -974,7 +974,7 @@ body {
 }
 
 .link-vk:before {
-  content: url("/images/icons/social/social-vk.svg");
+  content: url("../images/icons/social/social-vk.svg");
   width: 47px;
   height: 40px;
   display: block;
@@ -983,7 +983,7 @@ body {
 }
 
 .link-telegram:before {
-  content: url("/images/icons/social/social-telegram.svg");
+  content: url("../images/icons/social/social-telegram.svg");
   width: 47px;
   height: 40px;
   display: block;
@@ -992,7 +992,7 @@ body {
 }
 
 .link-youtube:before {
-  content: url("/images/icons/social/social-youtube.svg");
+  content: url("../images/icons/social/social-youtube.svg");
   width: 47px;
   height: 40px;
   display: block;
