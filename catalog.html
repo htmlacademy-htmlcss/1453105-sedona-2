@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="./images/favicon.png">
   <title>Каталог Седона</title>
   <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -62,18 +63,21 @@
             <li class="catalog-filter-item">
               <label class="control">
                 <input class="control-input" type="checkbox" name="swimming-pool" checked>
+                <span class="control-mark"></span>
                 Бассейн
               </label>
             </li>
             <li class="catalog-filter-item">
               <label class="control">
                 <input class="control-input" type="checkbox" name="parking" checked>
+                <span class="control-mark"></span>
                 Парковка
               </label>
             </li>
             <li class="catalog-filter-item">
               <label class="control">
                 <input class="control-input" type="checkbox" name="wi-fi">
+                <span class="control-mark"></span>
                 Wi-Fi
               </label>
             </li>
@@ -108,13 +112,13 @@
             <li class="catalog-filter-period-item">
               <label class="period-item">
                 <span class="period-item-label">от</span>
-                <input class="period-item-input" type="text" name="min-price" placeholder="от" value="0">
+                <input class="period-item-input" type="number" name="min-price" placeholder="от" value="0">
               </label>
             </li>
             <li class="catalog-filter-period-item">
               <label class="period-item">
                 <span class="period-item-label">до</span>
-                <input class="period-item-input" type="text" name="max-price" placeholder="до" value="9000">
+                <input class="period-item-input" type="number" name="max-price" placeholder="до" value="9000">
               </label>
             </li>
           </ul>
