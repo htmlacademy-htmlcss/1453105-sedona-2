@@ -122,15 +122,17 @@
               </label>
             </li>
           </ul>
-          <div class="catalog-filter-period-range">
-            <label class="period-range-item">
-              <span class="visually-hidden">Минимальная цена на промежутке</span>
-              <input class="period-range-item-input" type="range" min="0" max="9000" name="price-range">
-            </label>
-            <label class="period-range-item">
-              <span class="visually-hidden">Максимальная цена на промежутке</span>
-              <input class="period-range-item-input" type="range" min="0" max="9000" name="price-range">
-            </label>
+          <div class="catalog-filter period-range">
+            <div class="range-scale">
+              <div class="range-bar" style="left: 0px; width: 210px">
+                <button class="range-toggle toggle-min">
+                  <span class="visually-hidden">Изменить минимальную цену</span>
+                </button>
+                <button class="range-toggle toggle-max">
+                  <span class="visually-hidden">Изменить максимальную цену</span>
+                </button>
+              </div>
+            </div>
           </div>
         </fieldset>
         <div class="catalog-filter-button-wrapper">
@@ -143,8 +145,8 @@
       <div class="offers-menu">
         <h2 class="offers-count">Найдено гостиниц: <span>38</span></h2>
         <select class="offers select-control" aria-label="Сортировка">
-          <option class="option" value="popular">Сначала популярные</option>
           <option class="option" value="cheap">Сначала дешёвые</option>
+          <option class="option" value="popular">Сначала популярные</option>
           <option class="option" value="expensive">Сначала дорогие</option>
         </select>
         <ul class="offers-view">
