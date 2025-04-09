@@ -803,7 +803,7 @@ body {
 
 .catalog-filter-period-item:last-child .period-item-input {
   border-radius: 0 4px 4px 0;
-  padding-right: 40px;
+  padding-right: 43px;
 }
 
 .period-item-input:hover {
@@ -841,14 +841,20 @@ body {
   border: 2px solid var(--default-color);
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .range-toggle:hover {
-  background-color: #82b3d3;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease-in-out;
 }
 
-.range-toggle:active,
-.range-toggle:focus {
+.range-toggle:active {
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
+}
+
+.range-toggle:focus-visible {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
   outline: 3px solid #82b3d3;
 }
 
@@ -866,6 +872,63 @@ body {
   font-size: 18px;
   line-height: 1.28;
   color: var(--default-color);
+  position: relative;
+  display: block;
+  padding-left: 36px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.control-mark {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: var(--default-color);
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.control:hover {
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.3s ease-in-out;
+}
+
+.control:hover .control-mark,
+.control:active .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.control-input:focus-visible + .control-mark {
+  outline: 3px solid #83b3d3;
+}
+
+.control-input:disabled + .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  display: block;
+  content: "";
+  mask-image: url("../images/icons/service/control_checkbox.svg");
+  background-color: #3f5e72;
+  width: 20px;
+  height: 20px;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  display: block;
+  content: "";
+  mask-image: url("../images/icons/service/control_radio.svg");
+  background-color: #3f5e72;
+  width: 20px;
+  height: 20px;
 }
 
 .catalog-filter-button-wrapper {
