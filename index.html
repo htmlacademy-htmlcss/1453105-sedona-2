@@ -108,8 +108,10 @@
       <p class="suggestion-title">Заинтересовались?</p>
       <p class="suggestion-subtitle">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в
         Седоне</p>
-      <div class="suggestion-link-wrapper"><a class="suggestion-link link-button" href="catalog.html">Поиск гостиницы в
-        Седоне</a></div>
+      <div class="suggestion-link-wrapper">
+        <a class="suggestion-link link-button"
+           onclick="document.getElementById('popup-search').classList.remove('close')">Поиск гостиницы в Седоне</a>
+      </div>
     </section>
     <section class="notification main-notification">
       <h2 class="notification-title">Подпишитесь на рассылку</h2>
@@ -147,6 +149,62 @@
       <a class="contact-developer-link" href="https://htmlacademy.ru/"></a>
     </section>
   </footer>
+  <div class="modal-container close" id="popup-search">
+    <div class="modal modal-search">
+      <button class="modal-close-button" onclick="document.getElementById('popup-search').classList.add('close')"><span
+        class="visually-hidden">Закрыть</span></button>
+      <section>
+        <form class="search-form" action="#" method="get">
+          <h2 class="search-form-title">Поиск гостиницы в Седоне</h2>
+          <p class="search-form-field date-field">
+            <label class="form-label" for="check-in-date">Дата заезда:</label>
+            <input class="form-input" type="text" id="check-in-date" name="check-in-date" required
+                   placeholder="Укажите дату">
+            <button class="form-input-action"><span class="visually-hidden">Укажите дату заезда</span></button>
+            <span class="input-error">Мы не можем отправить вас в прошлое.</span>
+          </p>
+          <p class="search-form-field date-field">
+            <label class="form-label" for="check-out-date">Дата выезда:</label>
+            <input class="form-input" type="text" id="check-out-date" name="check-out-date" required
+                   placeholder="Укажите дату">
+            <button class="form-input-action"><span class="visually-hidden">Укажите дату выезда</span></button>
+            <span class="input-hint">На эти даты есть свободные номера. Пока есть.</span>
+          </p>
+          <div class="search-form-field-group">
+            <p class="search-form-field guests-field">
+              <label class="form-label" for="guests">Взрослые:</label>
+              <button class="form-count minus">
+                <span class="visually-hidden">Уменьшить</span>
+              </button>
+              <input class="form-input" type="number" id="guests" name="guests" value="2">
+              <button class="form-count plus">
+                <span class="visually-hidden">Увеличить</span>
+              </button>
+            </p>
+            <p class="search-form-field guests-field child">
+              <span class="form-label-icon">
+                <label class="form-label" for="children">Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date"></button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами,
+                    возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+              </span>
+              <button class="form-count minus">
+                <span class="visually-hidden">Уменьшить</span>
+              </button>
+              <input class="form-input" type="number" id="children" name="children" value="1">
+              <button class="form-count plus">
+                <span class="visually-hidden">Увеличить</span>
+              </button>
+            </p>
+          </div>
+          <button class="search-form-button action-button">Найти</button>
+        </form>
+      </section>
+    </div>
+  </div>
 </div>
+
 </body>
 </html>
