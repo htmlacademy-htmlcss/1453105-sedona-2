@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="main-container">
-  <header class="main-header">
+  <header class="main-header" data-test="header">
     <nav class="navigation">
       <a class="logo-link" href="index.html">
         <img class="logo" src="images/logo/logo.svg" width="140" height="70" alt="Логотип сайта">
@@ -43,13 +43,13 @@
       </ul>
     </nav>
   </header>
-  <main class="main-index index-grow">
-    <section class="representation">
+  <main class="main-index index-grow" data-test="main">
+    <section class="representation"  data-test="hero">
       <h1 class="visually-hidden">Туристический город Седона в Аризоне</h1>
       <img class="representation-image" src="images/decorate/welcome.svg" width="458" height="352"
            alt="Логотип 'Добро пожаловать в Седону'">
     </section>
-    <section class="advantages">
+    <section class="advantages" data-test="advantages">
       <h2 class="visually-hidden">Преимущества</h2>
       <p class="advantages-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
       <p class="advantages-subtitle">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
@@ -103,7 +103,7 @@
         </li>
       </ul>
     </section>
-    <section class="suggestion">
+    <section class="suggestion" data-test="search">
       <h2 class="visually-hidden">Перейти к выбору гостиницы</h2>
       <p class="suggestion-title">Заинтересовались?</p>
       <p class="suggestion-subtitle">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в
@@ -113,7 +113,7 @@
            onclick="document.getElementById('popup-search').classList.remove('close')">Поиск гостиницы в Седоне</a>
       </div>
     </section>
-    <section class="notification main-notification">
+    <section class="notification main-notification" data-test="subscribe">
       <h2 class="notification-title">Подпишитесь на рассылку</h2>
       <p class="notification-subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
       <form class="notification-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -123,7 +123,7 @@
       </form>
     </section>
   </main>
-  <footer class="main-footer">
+  <footer class="main-footer" data-test="footer">
     <section class="contact">
       <h2 class="visually-hidden">Контакты</h2>
       <ul class="contact-social-list">
@@ -226,6 +226,5 @@
     </div>
   </div>
 </div>
-
 </body>
 </html>
