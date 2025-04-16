@@ -214,7 +214,7 @@ body {
   display: flex;
   width: 1060px;
   margin: 0 auto;
-  column-gap: 30px;
+  column-gap: 28px;
 }
 
 .logo-link {
@@ -236,7 +236,7 @@ body {
 }
 
 .navigation-list .navigation-item {
-  align-content: flex-start;
+  align-content: center;
 }
 
 .navigation-user {
@@ -274,13 +274,15 @@ body {
 .navigation-link.link-button {
   font-size: 16px;
   line-height: 1.25;
-  padding: 8px 34px;
+  padding: 7px 8px;
   display: block;
   color: var(--default-color);
+  min-height: 34px;
+  min-width: 158px;
 }
 
 .navigation-item .link-button {
-  margin: 14px 0 14px 20px;
+  margin: 14px 0 14px 22px;
 }
 
 .link-search,
@@ -291,11 +293,17 @@ body {
 
 .link-search:before {
   content: url("../images/icons/service/search.svg");
+  display: block;
+  width: 20px;
+  height: 20px;
 }
 
 .link-favorite:before {
   content: url("../images/icons/service/heart.svg");
   position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
 }
 
 .favorite-count {
@@ -325,8 +333,8 @@ body {
   color: var(--main-color);
   background: #3f5e72 url("../images/decorate/background/index-background.jpg") no-repeat;
   background-size: 100%;
-  padding: 50px 0 80px;
-  clip-path: polygon(20.83% 88%, 20.84% 93.03%, -0% 88%, -0% 0%, 100% 0%, 100.00% 88%, 79.17% 93.12%, 79.17% 88%, 50% 100%);
+  padding: 51px 0 82px;
+  clip-path: polygon(20.83% 88%, 20.84% 93.03%, -0% 88%, -0% 0%, 100% 0%, 100.00% 88%, 79.17% 93.02%, 79.17% 88%, 50% 100%);
 }
 
 .representation-image {
@@ -338,7 +346,7 @@ body {
 
 .advantages {
   background-color: var(--default-color);
-  padding-top: 70px;
+  padding-top: 69px;
 }
 
 .advantages-title {
@@ -378,7 +386,7 @@ body {
   display: flex;
   flex-direction: column;
   align-self: center;
-  padding: 80px;
+  padding: 70px 80px;
 }
 
 .advantages-item.item-dark {
@@ -440,6 +448,9 @@ body {
   opacity: 0.3;
 }
 
+.advantages-item-image {
+  display: block;
+}
 
 .advantages-item-description {
   margin: 30px 0 0;
@@ -738,11 +749,13 @@ body {
 }
 
 .catalog-filter-title {
+  padding: 0;
   margin-bottom: 32px;
   font-size: 20px;
   line-height: 1.2;
   font-weight: 700;
   color: var(--default-color);
+  text-transform: capitalize;
 }
 
 .catalog-filter-item {
@@ -825,7 +838,7 @@ body {
 .range-scale {
   position: relative;
   height: 4px;
-  margin-top: 42px;
+  margin-top: 44px;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 2px;
 }
@@ -885,6 +898,8 @@ body {
 .control-mark {
   position: absolute;
   left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 20px;
   height: 20px;
   background-color: var(--default-color);
@@ -915,7 +930,7 @@ body {
 .control-input[type="checkbox"]:checked + .control-mark::before {
   display: block;
   content: "";
-  mask-image: url("../images/icons/service/control_checkbox.svg");
+  mask: url("../images/icons/service/control_checkbox.svg") no-repeat center;
   background-color: #3f5e72;
   width: 20px;
   height: 20px;
@@ -928,7 +943,7 @@ body {
 .control-input[type="radio"]:checked + .control-mark::before {
   display: block;
   content: "";
-  mask-image: url("../images/icons/service/control_radio.svg");
+  mask: url("../images/icons/service/control_radio.svg") no-repeat center;
   background-color: #3f5e72;
   width: 20px;
   height: 20px;
@@ -1090,7 +1105,7 @@ body {
 }
 
 .offers-view-link {
-  padding: 16px 15px;
+  padding: 15px 14px;
   display: block;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
@@ -1109,7 +1124,7 @@ body {
   height: 14px;
   align-items: center;
   justify-content: center;
-  mask-image: url("../images/icons/view/view-flat.svg");
+  mask: url("../images/icons/view/view-flat.svg") no-repeat center;
   background-color: #333333;
 }
 
@@ -1120,7 +1135,7 @@ body {
   height: 14px;
   align-items: center;
   justify-content: center;
-  mask-image: url("../images/icons/view/view-main.svg");
+  mask: url("../images/icons/view/view-main.svg") no-repeat center;
   background-color: #333333;
 }
 
@@ -1131,7 +1146,7 @@ body {
   height: 14px;
   align-items: center;
   justify-content: center;
-  mask-image: url("../images/icons/view/view-table.svg");
+  mask: url("../images/icons/view/view-table.svg") no-repeat center;
   background-color: #333333;
 }
 
@@ -1344,7 +1359,7 @@ body {
   display: block;
   text-align: center;
   align-content: center;
-  mask-image: url("../images/icons/social/social-vk.svg");
+  mask: url("../images/icons/social/social-vk.svg") no-repeat center;
   background-color: #83b3d3;
 }
 
@@ -1355,7 +1370,7 @@ body {
   display: block;
   text-align: center;
   align-content: center;
-  mask-image: url("../images/icons/social/social-telegram.svg");
+  mask: url("../images/icons/social/social-telegram.svg") no-repeat center;
   background-color: #83b3d3;
 }
 
@@ -1366,7 +1381,7 @@ body {
   display: block;
   text-align: center;
   align-content: center;
-  mask-image: url("../images/icons/social/social-youtube.svg");
+  mask: url("../images/icons/social/social-youtube.svg") no-repeat center;
   background-color: #83b3d3;
   transition: background-color 0.3s ease-in-out;
 }
@@ -1421,7 +1436,7 @@ body {
 
 .contact-developer-link::before {
   content: "";
-  mask-image: url("../images/logo/logo-htmlacademy.svg");
+  mask: url("../images/logo/logo-htmlacademy.svg") no-repeat center;
   background-color: #333333;
   display: block;
   width: 115px;
@@ -1568,7 +1583,7 @@ body {
 .form-input-action::after {
   content: "";
   display: block;
-  mask-image: url("../images/icons/service/date.svg");
+  mask: url("../images/icons/service/date.svg") no-repeat center;
   background-color: rgba(0, 0, 0, 0.3);
   width: 20px;
   height: 20px;
@@ -1652,7 +1667,7 @@ body {
 .minus:before {
   content: "";
   display: block;
-  mask-image: url("../images/icons/service/minus.svg");
+  mask: url("../images/icons/service/minus.svg") no-repeat center;
   background-color: rgba(0, 0, 0, 0.3);
   width: 20px;
   height: 20px;
@@ -1679,7 +1694,7 @@ body {
 .plus:before {
   content: "";
   display: block;
-  mask-image: url("../images/icons/service/plus.svg");
+  mask: url("../images/icons/service/plus.svg") no-repeat center;
   background-color: rgba(0, 0, 0, 0.3);
   width: 20px;
   height: 20px;
@@ -1750,7 +1765,7 @@ body {
 .tooltip-toggle::after {
   content: "";
   display: block;
-  mask-image: url("../images/icons/service/info.svg");
+  mask: url("../images/icons/service/info.svg") no-repeat center;
   background-color: var(--default-color);
   width: 20px;
   height: 20px;
