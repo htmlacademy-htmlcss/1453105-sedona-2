@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" href="./images/favicon.png">
+  <link rel="icon" href="./images/favicon.ico">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 <div class="main-container">
-  <header class="main-header">
+  <header class="main-header" data-test="header">
     <nav class="navigation">
       <a class="logo-link" href="index.html">
         <img class="logo" src="images/logo/logo.svg" width="140" height="70" alt="Логотип сайта">
@@ -43,13 +43,13 @@
       </ul>
     </nav>
   </header>
-  <main class="main-index index-grow">
-    <section class="representation">
+  <main class="main-index index-grow" data-test="main">
+    <section class="representation" data-test="hero">
       <h1 class="visually-hidden">Туристический город Седона в Аризоне</h1>
       <img class="representation-image" src="images/decorate/welcome.svg" width="458" height="352"
            alt="Логотип 'Добро пожаловать в Седону'">
     </section>
-    <section class="advantages">
+    <section class="advantages" data-test="advantages">
       <h2 class="visually-hidden">Преимущества</h2>
       <p class="advantages-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
       <p class="advantages-subtitle">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
@@ -91,27 +91,34 @@
       <ul class="services-list item-light">
         <li class="services-item item-light">
           <h3 class="services-item-title service-housing">Жильё</h3>
-          <p class="services-item-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+          <p class="services-item-description">Рекомендуем пожить <br> в настоящем мотеле, <br> всё как в кино!</p>
         </li>
         <li class="services-item">
           <h3 class="services-item-title service-nutrition">Еда</h3>
-          <p class="services-item-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+          <p class="services-item-description">Всегда заказывайте <br> топовый фирменный бургер, <br> вы не
+            разочаруетесь!</p>
         </li>
         <li class="services-item item-light">
           <h3 class="services-item-title service-souvenirs">Сувениры</h3>
-          <p class="services-item-description">Не только китайского, но и настоящего местного производства!</p>
+          <p class="services-item-description">Не только китайского, <br> но и настоящего местного <br> производства!
+          </p>
         </li>
       </ul>
     </section>
-    <section class="suggestion">
+    <section class="suggestion" data-test="search">
       <h2 class="visually-hidden">Перейти к выбору гостиницы</h2>
       <p class="suggestion-title">Заинтересовались?</p>
-      <p class="suggestion-subtitle">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в
+      <p class="suggestion-subtitle">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения
+        гостиниц в
         Седоне</p>
-      <div class="suggestion-link-wrapper"><a class="suggestion-link link-button" href="catalog.html">Поиск гостиницы в
-        Седоне</a></div>
+      <div class="suggestion-link-wrapper">
+        <button class="suggestion-link link-button"
+                type="button"
+                onclick="document.getElementById('popup-search').classList.remove('close')">Поиск гостиницы в Седоне
+        </button>
+      </div>
     </section>
-    <section class="notification main-notification">
+    <section class="notification main-notification" data-test="subscribe">
       <h2 class="notification-title">Подпишитесь на рассылку</h2>
       <p class="notification-subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
       <form class="notification-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -121,7 +128,7 @@
       </form>
     </section>
   </main>
-  <footer class="main-footer">
+  <footer class="main-footer" data-test="footer">
     <section class="contact">
       <h2 class="visually-hidden">Контакты</h2>
       <ul class="contact-social-list">
@@ -147,6 +154,82 @@
       <a class="contact-developer-link" href="https://htmlacademy.ru/"></a>
     </section>
   </footer>
+  <div class="modal-container close" id="popup-search">
+    <div class="modal modal-search">
+      <button class="modal-close-button" onclick="document.getElementById('popup-search').classList.add('close')">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <section class="search-form-section">
+        <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+          <h2 class="search-form-title">Поиск гостиницы в Седоне</h2>
+          <p class="search-form-field date-field">
+            <label class="form-label" for="check-in-date">Дата заезда:</label>
+            <input class="form-input"
+                   type="text"
+                   id="check-in-date"
+                   name="check-in-date"
+                   required
+                   value="27 cентабря 2020"
+                   placeholder="Укажите дату">
+            <button class="form-input-action"><span class="visually-hidden">Укажите дату заезда</span></button>
+            <span class="input-error">Мы не можем отправить вас в прошлое.</span>
+          </p>
+          <p class="search-form-field date-field">
+            <label class="form-label" for="check-out-date">Дата выезда:</label>
+            <input class="form-input"
+                   type="text"
+                   id="check-out-date"
+                   name="check-out-date"
+                   required
+                   value="1 cентабря 2025"
+                   placeholder="Укажите дату">
+            <button class="form-input-action"><span class="visually-hidden">Укажите дату выезда</span></button>
+            <span class="input-hint">На эти даты есть свободные номера. Пока есть.</span>
+          </p>
+          <div class="search-form-field-group">
+            <p class="search-form-field guests-field">
+              <label class="form-label" for="guests">Взрослые:</label>
+              <button class="form-count minus">
+                <span class="visually-hidden">Уменьшить</span>
+              </button>
+              <input class="form-input"
+                     type="number"
+                     id="guests"
+                     name="guests"
+                     placeholder="0"
+                     value="2">
+              <button class="form-count plus">
+                <span class="visually-hidden">Увеличить</span>
+              </button>
+            </p>
+            <p class="search-form-field guests-field child">
+              <span class="form-label-icon">
+                <label class="form-label" for="children">Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date"></button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами,
+                    возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+              </span>
+              <button class="form-count minus">
+                <span class="visually-hidden">Уменьшить</span>
+              </button>
+              <input class="form-input"
+                     type="number"
+                     id="children"
+                     name="children"
+                     placeholder="0"
+                     value="1">
+              <button class="form-count plus">
+                <span class="visually-hidden">Увеличить</span>
+              </button>
+            </p>
+          </div>
+          <button class="search-form-button action-button">Найти</button>
+        </form>
+      </section>
+    </div>
+  </div>
 </div>
 </body>
 </html>

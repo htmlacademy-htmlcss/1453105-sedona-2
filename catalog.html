@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" href="./images/favicon.png">
+  <link rel="icon" href="./images/favicon.ico">
   <title>Каталог Седона</title>
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 <div class="main-container">
-  <header class="main-header">
+  <header class="main-header" data-test="header">
     <nav class="navigation">
       <a class="logo-link" href="index.html">
         <img class="logo" src="images/logo/logo.svg" width="140" height="70" alt="Логотип сайта">
@@ -43,8 +43,8 @@
       </ul>
     </nav>
   </header>
-  <main class="main-catalog index-grow">
-    <header class="catalog-header">
+  <main class="main-catalog index-grow" data-test="main">
+    <header class="catalog-header" data-test=" filter">
       <h1 class="catalog-header-title">Гостиницы Седоны</h1>
       <ol class="breadcrumbs">
         <li class="breadcrumbs-item">
@@ -62,21 +62,21 @@
           <ul class="catalog-filter-list">
             <li class="catalog-filter-item">
               <label class="control">
-                <input class="control-input" type="checkbox" name="swimming-pool" checked>
+                <input class="control-input visually-hidden" type="checkbox" name="swimming-pool" checked>
                 <span class="control-mark"></span>
                 Бассейн
               </label>
             </li>
             <li class="catalog-filter-item">
               <label class="control">
-                <input class="control-input" type="checkbox" name="parking" checked>
+                <input class="control-input visually-hidden" type="checkbox" name="parking" checked>
                 <span class="control-mark"></span>
                 Парковка
               </label>
             </li>
             <li class="catalog-filter-item">
               <label class="control">
-                <input class="control-input" type="checkbox" name="wi-fi">
+                <input class="control-input visually-hidden" type="checkbox" name="wi-fi">
                 <span class="control-mark"></span>
                 Wi-Fi
               </label>
@@ -88,19 +88,22 @@
           <ul class="catalog-filter-list">
             <li class="catalog-filter-item">
               <label class="control">
-                <input class="control-input" type="radio" name="housing" value="apartments" checked>
+                <input class="control-input visually-hidden" type="radio" name="housing" value="apartments" checked>
+                <span class="control-mark"></span>
                 Гостиница
               </label>
             </li>
             <li class="catalog-filter-item">
               <label class="control">
-                <input class="control-input" type="radio" name="housing" value="motel">
+                <input class="control-input visually-hidden" type="radio" name="housing" value="motel">
+                <span class="control-mark"></span>
                 Мотель
               </label>
             </li>
             <li class="catalog-filter-item">
               <label class="control">
-                <input class="control-input" type="radio" name="housing" value="suite">
+                <input class="control-input visually-hidden" type="radio" name="housing" value="suite">
+                <span class="control-mark"></span>
                 Апартаменты
               </label>
             </li>
@@ -112,25 +115,33 @@
             <li class="catalog-filter-period-item">
               <label class="period-item">
                 <span class="period-item-label">от</span>
-                <input class="period-item-input" type="number" name="min-price" placeholder="от" value="0">
+                <input class="period-item-input"
+                       type="number"
+                       name="min-price"
+                       value="0">
               </label>
             </li>
             <li class="catalog-filter-period-item">
               <label class="period-item">
                 <span class="period-item-label">до</span>
-                <input class="period-item-input" type="number" name="max-price" placeholder="до" value="9000">
+                <input class="period-item-input"
+                       type="number"
+                       name="max-price"
+                       value="9000">
               </label>
             </li>
           </ul>
-          <div class="catalog-filter-period-range">
-            <label class="period-range-item">
-              <span class="visually-hidden">Минимальная цена на промежутке</span>
-              <input class="period-range-item-input" type="range" min="0" max="9000" name="price-range">
-            </label>
-            <label class="period-range-item">
-              <span class="visually-hidden">Максимальная цена на промежутке</span>
-              <input class="period-range-item-input" type="range" min="0" max="9000" name="price-range">
-            </label>
+          <div class="catalog-filter period-range">
+            <div class="range-scale">
+              <div class="range-bar" style="left: 0px; width: 210px">
+                <button class="range-toggle toggle-min">
+                  <span class="visually-hidden">Изменить минимальную цену</span>
+                </button>
+                <button class="range-toggle toggle-max">
+                  <span class="visually-hidden">Изменить максимальную цену</span>
+                </button>
+              </div>
+            </div>
           </div>
         </fieldset>
         <div class="catalog-filter-button-wrapper">
@@ -139,12 +150,12 @@
         </div>
       </form>
     </header>
-    <section class="catalog-offers">
+    <section class="catalog-offers" data-test="catalog">
       <div class="offers-menu">
         <h2 class="offers-count">Найдено гостиниц: <span>38</span></h2>
         <select class="offers select-control" aria-label="Сортировка">
-          <option class="option" value="popular">Сначала популярные</option>
           <option class="option" value="cheap">Сначала дешёвые</option>
+          <option class="option" value="popular">Сначала популярные</option>
           <option class="option" value="expensive">Сначала дорогие</option>
         </select>
         <ul class="offers-view">
@@ -174,7 +185,7 @@
           </a>
           <p class="offer-card-info">
             <span class="offer-card-type">Гостиница</span>
-            <b class="offer-card-price">От 4000 ₽</b>
+            <b class="offer-card-price">От <span>4000</span> ₽</b>
           </p>
           <div class="offer-card-action">
             <a class="offer-link link-button" href="#">Подробнее</a>
@@ -187,7 +198,7 @@
               <li class="star"></li>
               <li class="star"></li>
             </ul>
-            <p class="rating-number">Рейтинг: 8,5</p>
+            <p class="rating-number">Рейтинг: <span>8,5</span></p>
           </div>
         </li>
         <li class="offer-card">
@@ -198,7 +209,7 @@
           </a>
           <p class="offer-card-info">
             <span class="offer-card-type">Гостиница</span>
-            <b class="offer-card-price">От 5000 ₽</b>
+            <b class="offer-card-price">От <span>5000</span> ₽</b>
           </p>
           <div class="offer-card-action">
             <a class="offer-link link-button" href="#">Подробнее</a>
@@ -211,7 +222,7 @@
               <li class="star"></li>
               <li class="star"></li>
             </ul>
-            <p class="rating-number">Рейтинг: 9,2</p>
+            <p class="rating-number">Рейтинг: <span>9,2</span></p>
           </div>
         </li>
         <li class="offer-card">
@@ -222,7 +233,7 @@
           </a>
           <p class="offer-card-info">
             <span class="offer-card-type">Гостиница</span>
-            <b class="offer-card-price">От 2500 ₽</b>
+            <b class="offer-card-price">От <span>2500</span> ₽</b>
           </p>
           <div class="offer-card-action">
             <a class="offer-link link-button" href="#">Подробнее</a>
@@ -234,7 +245,7 @@
               <li class="star"></li>
               <li class="star"></li>
             </ul>
-            <p class="rating-number">Рейтинг: 6,9</p>
+            <p class="rating-number">Рейтинг: <span>6,9</span></p>
           </div>
         </li>
         <li class="offer-card">
@@ -245,7 +256,7 @@
           </a>
           <p class="offer-card-info">
             <span class="offer-card-type">Гостиница</span>
-            <b class="offer-card-price">От 1500 ₽</b>
+            <b class="offer-card-price">От <span>1500</span> ₽</b>
           </p>
           <div class="offer-card-action">
             <a class="offer-link link-button" href="#">Подробнее</a>
@@ -256,7 +267,7 @@
               <li class="star"></li>
               <li class="star"></li>
             </ul>
-            <p class="rating-number">Рейтинг: 5,0</p>
+            <p class="rating-number">Рейтинг: <span>5,0</span></p>
           </div>
         </li>
       </ul>
@@ -281,7 +292,7 @@
         </li>
       </ul>
     </section>
-    <section class="notification catalog-page">
+    <section class="notification catalog-page" data-test="subscribe">
       <h2 class="notification-title">Подпишитесь на рассылку</h2>
       <p class="notification-subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
       <form class="notification-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -291,7 +302,7 @@
       </form>
     </section>
   </main>
-  <footer class="main-footer">
+  <footer class="main-footer" data-test="footer">
     <section class="contact">
       <h2 class="visually-hidden">Контакты</h2>
       <ul class="contact-social-list">
