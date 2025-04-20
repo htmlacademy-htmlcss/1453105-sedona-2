@@ -162,30 +162,35 @@
       <section class="search-form-section">
         <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
           <h2 class="search-form-title">Поиск гостиницы в Седоне</h2>
-          <p class="search-form-field date-field">
+          <div class="search-form-field date-field">
             <label class="form-label" for="check-in-date">Дата заезда:</label>
-            <input class="form-input"
-                   type="text"
-                   id="check-in-date"
-                   name="check-in-date"
-                   required
-                   value="27 cентабря 2020"
-                   placeholder="Укажите дату">
-            <button class="form-input-action"><span class="visually-hidden">Укажите дату заезда</span></button>
-            <span class="input-error">Мы не можем отправить вас в прошлое.</span>
-          </p>
-          <p class="search-form-field date-field">
+            <div class="form-input-wrapper">
+              <input class="form-input"
+                     type="text"
+                     id="check-in-date"
+                     name="check-in-date"
+                     required
+                     value="27 cентабря 2020"
+                     placeholder="Укажите дату">
+              <button class="form-input-action"><span class="visually-hidden">Укажите дату заезда</span></button>
+              <span class="input-error">Мы не можем отправить вас в прошлое.</span>
+            </div>
+
+          </div>
+          <div class="search-form-field date-field">
             <label class="form-label" for="check-out-date">Дата выезда:</label>
-            <input class="form-input"
-                   type="text"
-                   id="check-out-date"
-                   name="check-out-date"
-                   required
-                   value="1 cентабря 2025"
-                   placeholder="Укажите дату">
-            <button class="form-input-action"><span class="visually-hidden">Укажите дату выезда</span></button>
-            <span class="input-hint">На эти даты есть свободные номера. Пока есть.</span>
-          </p>
+            <div class="form-input-wrapper">
+              <input class="form-input"
+                     type="text"
+                     id="check-out-date"
+                     name="check-out-date"
+                     required
+                     value="1 cентабря 2025"
+                     placeholder="Укажите дату">
+              <button class="form-input-action"><span class="visually-hidden">Укажите дату выезда</span></button>
+              <span class="input-hint">На эти даты есть свободные номера. Пока есть.</span>
+            </div>
+          </div>
           <div class="search-form-field-group">
             <p class="search-form-field guests-field">
               <label class="form-label" for="guests">Взрослые:</label>

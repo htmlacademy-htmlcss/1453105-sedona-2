@@ -269,6 +269,7 @@ body {
   bottom: -1px;
   height: 2px;
   background-color: #756257;
+  z-index: 2;
 }
 
 .navigation-link.link-button {
@@ -277,8 +278,8 @@ body {
   padding: 7px 8px;
   display: block;
   color: var(--default-color);
-  min-height: 34px;
-  min-width: 158px;
+  min-height: 35px;
+  min-width: 159px;
 }
 
 .navigation-item .link-button {
@@ -553,7 +554,7 @@ body {
 .suggestion {
   text-align: center;
   background-color: var(--default-color);
-  padding: 96px 100px;
+  padding: 97px 100px 96px;
 }
 
 .suggestion-title {
@@ -628,6 +629,10 @@ body {
   background-size: cover;
 }
 
+.notification .notification-subtitle {
+  margin-bottom: 56px;
+}
+
 .main-notification .notification-subtitle {
   color: var(--default-color);
 }
@@ -649,6 +654,7 @@ body {
   min-height: 52px;
   flex-shrink: 0;
   border-radius: 0 4px 4px 0;
+  max-width: 400px;
 }
 
 .notification-input {
@@ -657,7 +663,7 @@ body {
   line-height: 1.33;
   font-weight: 400;
   flex-grow: 1;
-  padding: 14px 20px;
+  padding: 14px 18px;
   max-height: 52px;
   max-width: 452px;
   border: 3px solid var(--default-color);
@@ -734,12 +740,12 @@ body {
 
 .catalog-filter-group.housing {
   max-width: 150px;
-  margin-right: 70px;
+  margin-right: 71px;
 }
 
 .catalog-filter-group.infrastructure {
   max-width: 150px;
-  margin-right: 70px;
+  margin-right: 71px;
 }
 
 .catalog-filter-list {
@@ -975,7 +981,7 @@ body {
 }
 
 .breadcrumbs-item {
-  margin-left: 10px;
+  margin-left: 8px;
   align-content: center;
 }
 
@@ -1031,7 +1037,7 @@ body {
 .offers-menu {
   margin-bottom: 40px;
   display: flex;
-  gap: 70px;
+  gap: 71px;
   justify-content: space-between;
   align-items: center;
 }
@@ -1061,13 +1067,13 @@ body {
   min-height: 49px;
   appearance: none;
   margin: 0;
-  padding: 10px 20px;
+  padding: 10px 40px 10px 20px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   transition: border-color 0.3s ease-in-out;
   background-image: url("../images/icons/service/arrow_y.svg");
   background-repeat: no-repeat;
-  background-position: right 16px center;
+  background-position: right 13px center;
   cursor: pointer;
 }
 
@@ -1110,7 +1116,8 @@ body {
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   transition: border-color 0.3s ease-in-out;
-
+  width: 48px;
+  height: 48px;
 }
 
 .offers-view-link.selected {
@@ -1350,6 +1357,8 @@ body {
   list-style: none;
   align-items: center;
   justify-content: center;
+  max-width: 150px;
+  flex-wrap: wrap;
 }
 
 .link-vk:before {
@@ -1405,6 +1414,10 @@ body {
   opacity 0.3s ease-in-out;
 }
 
+.contact-address {
+  display: flex;
+  flex-direction: column;
+}
 
 .contact-phone {
   font-style: normal;
@@ -1415,6 +1428,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   transition: color 0.3s ease-in-out;
+  white-space: nowrap;
 }
 
 .contact-phone:hover,
@@ -1511,7 +1525,6 @@ body {
 }
 
 .modal-close-button:focus-visible {
-  outline: none;
   outline: 3px solid #83b3d3;
   background-color: #e5e5e5;
 }
@@ -1532,24 +1545,31 @@ body {
   line-height: 1.2;
   text-transform: uppercase;
   color: var(--main-color);
-  margin: 0 0 64px;
+  margin: 0 0 65px;
   padding-right: 40px;
 }
 
 .date-field {
   position: relative;
   display: grid;
-  grid: 1fr minmax(20px, auto) /1fr 440px;
+  grid-template-columns: 1fr 440px;
   column-gap: 10px;
   row-gap: 4px;
   grid-template-areas:
-    "label input"
-    ". subtitle";
+    "label wrapper";
+}
+
+.form-input-wrapper {
+  grid-area: wrapper;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .date-field .form-label {
   grid-area: label;
-  align-content: center;
+  align-content: start;
+  padding-top: 10px;
 }
 
 .form-label {
@@ -1562,17 +1582,17 @@ body {
 }
 
 .date-field .form-input {
-  grid-area: input;
   padding: 12px 60px 12px 20px;
   border-radius: 4px;
   background-color: #f2f2f2;
+  height: 48px;
 }
 
 .form-input-action {
   position: absolute;
   display: block;
   right: 15px;
-  top: 12%;
+  top: 7px;
   padding: 5px;
   border: none;
   border-radius: 4px;
@@ -1603,6 +1623,7 @@ body {
   border-radius: 4px;
   background-color: #f2f2f2;
   width: 111px;
+  height: 48px;
   padding: 14px 40px;
   text-align: center;
   display: block;
@@ -1721,6 +1742,7 @@ body {
   margin: 0 0 24px;
 }
 
+
 .search-form-field.guests-field {
   display: flex;
   flex-direction: row;
@@ -1730,7 +1752,6 @@ body {
 
 .input-error {
   color: #ff5757;
-  min-height: 20px;
 }
 
 .input-hint {
@@ -1781,7 +1802,7 @@ body {
   line-height: 1.25;
   font-size: 16px;
   text-transform: none;
-  padding: 18px 18px 18px 25px;
+  padding: 20px 22px 22px 20px;
   border-radius: 10px;
   display: block;
   width: 256px;
@@ -1819,10 +1840,10 @@ body {
 }
 
 .search-form-button {
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 17px;
+  padding-bottom: 17px;
   font-size: 20px;
-  margin-top: 20px;
+  margin-top: 23px;
   border-radius: 10px;
   font-weight: 700;
 }
