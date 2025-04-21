@@ -64,8 +64,6 @@ body {
 .main-index {
   color: var(--main-color);
   background-color: var(--default-color);
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
@@ -79,7 +77,6 @@ body {
   border-radius: 4px;
   display: block;
   text-align: center;
-  -ms-flex-line-pack: center;
   align-content: center;
   cursor: pointer;
   transition: background-color 0.3s, border-color 0.3s ease-in-out;
@@ -116,7 +113,6 @@ body {
   border-radius: 4px;
   display: block;
   text-align: center;
-  -ms-flex-line-pack: center;
   align-content: center;
   transition: background-color 0.3s, border-color 0.3s ease-in-out;
 }
@@ -169,7 +165,6 @@ body {
   border: 1px solid transparent;
   display: block;
   text-align: center;
-  -ms-flex-line-pack: center;
   align-content: center;
   cursor: pointer;
   transition: border 0.3s ease-in-out;
@@ -194,8 +189,6 @@ body {
 }
 
 .index-grow {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
@@ -245,7 +238,6 @@ body {
 }
 
 .navigation-list .navigation-item {
-  -ms-flex-line-pack: center;
   align-content: center;
 }
 
@@ -398,16 +390,12 @@ body {
 
 .advantages-item {
   min-height: 385px;
-  -ms-flex-line-pack: center;
   align-content: center;
 }
 
 .item-wrapper {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   flex-direction: column;
-  -ms-flex-item-align: center;
   align-self: center;
   padding: 70px 80px;
   min-width: 400px;
@@ -415,14 +403,11 @@ body {
 
 .advantages-item.item-dark {
   background-color: #82b3d3;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   flex-direction: row;
-  -ms-flex-line-pack: center;
   align-content: center;
 }
 
@@ -437,11 +422,7 @@ body {
   width: 400px;
   padding: 80px;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -450,11 +431,7 @@ body {
   width: 400px;
   padding: 80px;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -579,7 +556,6 @@ body {
 
 .services-item {
   min-height: 385px;
-  -ms-flex-line-pack: center;
   align-content: center;
   width: 400px;
   padding: 70px 85px;
@@ -701,7 +677,6 @@ body {
   font-weight: 700;
   min-width: 232px;
   min-height: 52px;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
   border-radius: 0 4px 4px 0;
   max-width: 400px;
@@ -712,8 +687,6 @@ body {
   font-family: inherit;
   line-height: 1.33;
   font-weight: 400;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   padding: 14px 18px;
   max-height: 52px;
@@ -1040,13 +1013,11 @@ input[type='number'] {
 
 .breadcrumbs-item {
   margin-left: 8px;
-  -ms-flex-line-pack: center;
   align-content: center;
 }
 
 .breadcrumbs-item:first-child {
   margin-left: 0;
-  -ms-flex-line-pack: center;
   align-content: center;
 }
 
@@ -1056,7 +1027,6 @@ input[type='number'] {
   height: 13px;
   display: block;
   text-align: center;
-  -ms-flex-line-pack: center;
   align-content: center;
 }
 
@@ -1348,7 +1318,6 @@ input[type='number'] {
   min-height: 36px;
   padding: 5px;
   text-align: center;
-  -ms-flex-line-pack: center;
   align-content: center;
   border-radius: 4px;
 }
@@ -1360,7 +1329,6 @@ input[type='number'] {
   margin-right: 6px;
   display: block;
   text-align: center;
-  -ms-flex-line-pack: center;
   align-content: center;
 }
 
@@ -1393,7 +1361,6 @@ input[type='number'] {
 
 .pagination-link {
   border-radius: 4px;
-  -ms-flex-line-pack: center;
   align-content: center;
   display: block;
   min-width: 60px;
@@ -1475,7 +1442,6 @@ input[type='number'] {
   height: 40px;
   display: block;
   text-align: center;
-  -ms-flex-line-pack: center;
   align-content: center;
   mask: url("../images/icons/social/social-vk.svg") no-repeat center;
   background-color: #83b3d3;
@@ -1487,7 +1453,6 @@ input[type='number'] {
   height: 40px;
   display: block;
   text-align: center;
-  -ms-flex-line-pack: center;
   align-content: center;
   mask: url("../images/icons/social/social-telegram.svg") no-repeat center;
   background-color: #83b3d3;
@@ -1499,7 +1464,6 @@ input[type='number'] {
   height: 40px;
   display: block;
   text-align: center;
-  -ms-flex-line-pack: center;
   align-content: center;
   mask: url("../images/icons/social/social-youtube.svg") no-repeat center;
   background-color: #83b3d3;
