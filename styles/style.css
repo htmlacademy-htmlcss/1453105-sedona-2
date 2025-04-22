@@ -1057,7 +1057,8 @@ input[type='number'] {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 71px;
+  column-gap: 71px;
+  row-gap: 30px;
   justify-content: space-between;
   align-items: center;
 }
@@ -1382,7 +1383,7 @@ input[type='number'] {
   padding: 0;
   list-style: none;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   max-width: 150px;
   flex-wrap: wrap;
 }
@@ -1519,6 +1520,7 @@ input[type='number'] {
   height: 100%;
   display: flex;
   background-color: rgba(255, 255, 255, 0.6);
+  z-index: 2;
 }
 
 .modal-container.close {
@@ -1532,6 +1534,7 @@ input[type='number'] {
   background-color: var(--default-color);
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
   border-radius: 30px;
+
 }
 
 .modal-search {
