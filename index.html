@@ -62,15 +62,15 @@
           <img class="advantages-item-image" src="images/decorate/advantage/photo-1.jpg" width="800" height="385"
                alt="Жизнь в Седоне">
         </li>
-        <li class="advantages-item item-brightest">
+        <li class="advantages-item">
           <h3 class="advantages-item-title">Небольшая площадь</h3>
           <p class="advantages-item-description">Все достопримечательности находятся очень близко</p>
         </li>
-        <li class="advantages-item item-light">
+        <li class="advantages-item">
           <h3 class="advantages-item-title">Красивая дорога</h3>
           <p class="advantages-item-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </li>
-        <li class="advantages-item item-brightest">
+        <li class="advantages-item">
           <h3 class="advantages-item-title">Мало туристов</h3>
           <p class="advantages-item-description">Большинство едет в Гранд Каньон и толпится там</p>
         </li>
@@ -88,8 +88,8 @@
       <h2 class="visually-hidden">Услуги</h2>
       <p class="services-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
       <p class="services-subtitle">Опытный персонал и качественное обслуживание!</p>
-      <ul class="services-list item-light">
-        <li class="services-item item-light">
+      <ul class="services-list">
+        <li class="services-item">
           <h3 class="services-item-title service-housing">Жильё</h3>
           <p class="services-item-description">Рекомендуем пожить <br> в настоящем мотеле, <br> всё как в кино!</p>
         </li>
@@ -98,7 +98,7 @@
           <p class="services-item-description">Всегда заказывайте <br> топовый фирменный бургер, <br> вы не
             разочаруетесь!</p>
         </li>
-        <li class="services-item item-light">
+        <li class="services-item">
           <h3 class="services-item-title service-souvenirs">Сувениры</h3>
           <p class="services-item-description">Не только китайского, <br> но и настоящего местного <br> производства!
           </p>
@@ -152,88 +152,6 @@
       <a class="contact-developer-link" aria-label="Ссылка на сайт разработчика" href="https://htmlacademy.ru/"></a>
     </section>
   </footer>
-  <div class="modal-container close" id="popup-search">
-    <div class="modal modal-search">
-      <button class="modal-close-button" onclick="document.getElementById('popup-search').classList.add('close')">
-        <span class="visually-hidden">Закрыть</span>
-      </button>
-      <section class="search-form-section">
-        <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
-          <h2 class="search-form-title">Поиск гостиницы в Седоне</h2>
-          <div class="search-form-field date-field">
-            <label class="form-label" for="check-in-date">Дата заезда:</label>
-            <div class="form-input-wrapper">
-              <input class="form-input"
-                     type="text"
-                     id="check-in-date"
-                     name="check-in-date"
-                     required
-                     value="27 cентабря 2020"
-                     placeholder="Укажите дату">
-              <button class="form-input-action"><span class="visually-hidden">Укажите дату заезда</span></button>
-              <span class="input-error">Мы не можем отправить вас в прошлое.</span>
-            </div>
-
-          </div>
-          <div class="search-form-field date-field">
-            <label class="form-label" for="check-out-date">Дата выезда:</label>
-            <div class="form-input-wrapper">
-              <input class="form-input"
-                     type="text"
-                     id="check-out-date"
-                     name="check-out-date"
-                     required
-                     value="1 cентабря 2025"
-                     placeholder="Укажите дату">
-              <button class="form-input-action"><span class="visually-hidden">Укажите дату выезда</span></button>
-              <span class="input-hint">На эти даты есть свободные номера. Пока есть.</span>
-            </div>
-          </div>
-          <div class="search-form-field-group">
-            <p class="search-form-field guests-field">
-              <label class="form-label" for="guests">Взрослые:</label>
-              <button class="form-count minus">
-                <span class="visually-hidden">Уменьшить</span>
-              </button>
-              <input class="form-input"
-                     type="number"
-                     id="guests"
-                     name="guests"
-                     placeholder="0"
-                     required
-                     value="2">
-              <button class="form-count plus">
-                <span class="visually-hidden">Увеличить</span>
-              </button>
-            </p>
-            <p class="search-form-field guests-field child">
-              <span class="form-label-icon">
-                <label class="form-label" for="children">Дети:</label>
-                <span class="tooltip">
-                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date"></button>
-                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами,
-                    возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-                </span>
-              </span>
-              <button class="form-count minus">
-                <span class="visually-hidden">Уменьшить</span>
-              </button>
-              <input class="form-input"
-                     type="number"
-                     id="children"
-                     name="children"
-                     placeholder="0"
-                     value="1">
-              <button class="form-count plus">
-                <span class="visually-hidden">Увеличить</span>
-              </button>
-            </p>
-          </div>
-          <button class="search-form-button action-button" type="submit">Найти</button>
-        </form>
-      </section>
-    </div>
-  </div>
 </div>
 </body>
 </html>
