@@ -266,10 +266,13 @@ body {
   display: block;
   max-width: 250px;
   position: relative;
+  transition: color 0.3s ease-in-out;
 }
 
-.navigation-link:not(.navigation-link-current):not(.link-button):hover {
+.navigation-link:not(.navigation-link-current):not(.link-button):hover,
+.navigation-link:not(.navigation-link-current):not(.link-button):focus-visible {
   color: #83b3d3;
+  transition: color 0.3s ease-in-out;
 }
 
 .navigation-link-current.navigation-link::after {
@@ -304,18 +307,36 @@ body {
 }
 
 .link-search::before {
-  content: url("../images/icons/service/search.svg");
+  content: "";
+  mask-image: url("../images/icons/service/search.svg");
+  background-color: var(--main-color);
   display: block;
   width: 20px;
   height: 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.link-search:hover::before,
+.link-search:focus-visible::before {
+  background-color: #83b3d3;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .link-favorite::before {
-  content: url("../images/icons/service/heart.svg");
+  content: "";
+  mask-image: url("../images/icons/service/heart.svg");
+  background-color: var(--main-color);
   position: relative;
   display: block;
   width: 20px;
   height: 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.link-favorite:hover::before,
+.link-favorite:focus-visible::before {
+  background-color: #83b3d3;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .favorite-count {
@@ -343,7 +364,7 @@ body {
 .representation {
   color: var(--main-color);
   background: #3f5e72 url("../images/decorate/background/index-background.jpg") no-repeat;
-  background-size: 100%;
+  background-size: auto 100%;
   padding: 51px 0 82px;
   -webkit-clip-path: polygon(20.83% 88%, 20.84% 93.03%, -0% 88%, -0% 0%, 100% 0%, 100.00% 88%, 79.17% 93.02%, 79.17% 88%, 50% 100%);
   clip-path: polygon(20.83% 88%, 20.84% 93.03%, -0% 88%, -0% 0%, 100% 0%, 100.00% 88%, 79.17% 93.02%, 79.17% 88%, 50% 100%);
@@ -414,7 +435,7 @@ body {
   flex-direction: row-reverse;
 }
 
-.advantages-item.item-light {
+.advantages-item:not(.item-dark):nth-child(2n+1) {
   background-color: #83b3d333;
   width: 400px;
   padding: 80px;
@@ -423,7 +444,7 @@ body {
   justify-content: center;
 }
 
-.advantages-item.item-brightest {
+.advantages-item:not(.item-dark):nth-child(2n) {
   background-color: #83b3d31f;
   width: 400px;
   padding: 80px;
@@ -558,7 +579,7 @@ body {
   padding: 70px 85px;
 }
 
-.services-item.item-light {
+.services-item:nth-child(2n+1) {
   background-color: #83b3d333;
 }
 
